@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'add-contact',
   template: `
-  <button type="button">Add New Contact</button>
+  <button (click)="toggleContactForm()" type="button">Add New Contact</button>
   <div *ngIf="showForm">
     <h2>New Contact</h2>
     <form>
@@ -24,7 +24,7 @@ import { Component } from '@angular/core';
         <label for="postal">Postal Code</label>
         <input id="postal" type="text">
       </fieldset>
-      <button type="submit">Save Contact</button>
+      <button (click)="addContact()" type="submit">Save Contact</button>
     </form>
   </div>
   `,
@@ -34,6 +34,14 @@ export class AddContactComponent  {
   showForm: boolean;
 
   constructor(){
-    showForm: false;
+    this.showForm = false;
+  }
+
+  toggleContactForm() {
+    this.showForm = !this.showForm;
+  }
+
+  addContact() {
+    
   }
 }
