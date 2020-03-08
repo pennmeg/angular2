@@ -9,4 +9,16 @@ import { Component } from '@angular/core';
     </ul>
   `,
 })
-export class ContactsComponent  { name = 'Angular'; }
+export class ContactsComponent  {
+  name: string;
+  email: string;
+  phone: number;
+  address: address;
+}
+
+interface address {
+  street: string;
+  city: string;
+  state: string;
+  postalCode: number;
+}

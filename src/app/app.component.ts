@@ -8,4 +8,4 @@ import { Component } from '@angular/core';
     <contact-list></contact-list>
   `,
 })
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent  { }
